@@ -1,0 +1,6 @@
+C:\Users\decla\onedrive\documents\northwestern\2025-2026\Mecheng224\activity0
+commandline.txt first.txt
+mkdir myfolder
+cd myfolder
+mv notes.txt myfolder/
+rm notes.txt
