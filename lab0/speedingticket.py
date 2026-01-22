@@ -5,8 +5,8 @@ Creation Date: 1/9/26
 Speeding ticket code
 """
 
-speed_limit = int(input('Type the speed limit (mph): '))
-driving_speed = int(input('Type the driving speed (mph) : '))
+speed_limit = int(input())
+driving_speed = int(input())
 ticket = 0
 
 if ((driving_speed - speed_limit < 6) and (speed_limit - driving_speed < 10)):

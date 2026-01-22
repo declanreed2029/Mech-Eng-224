@@ -5,23 +5,25 @@ Creation Date: 1/9/26
 Alignment Code
 """
 
-print('Hello and welcome to DNA alignment program!')
+print('Hello and welcome to DNA sequence alignment program!')
 
-sequence1 = input("Please enter DNA sequence (using uppercase letters A, T, C, G, and an indel symbol): ")
-sequence2 = input("Please enter DNA sequence (using uppercase letters A, T, C, G, and an indel symbol): ")
+sequence1 = input("Please enter DNA sequence (using uppercase letters A, T, C, G and an indel symbol): ")
+sequence2 = input("Please enter DNA sequence (using uppercase letters A, T, C, G and an indel symbol): ")
 min_seq = sequence1
 
 if (len(sequence2) < len(sequence1)):
     min_seq = sequence2
 
-print("You entered: \n" + sequence1 + '\n' + sequence2)
+print("You entered: " + sequence1 + '\n' + sequence2)
 
 command = 'a'
 while (command != 'q'):
     command = ''
+    command = input("Select one of the following commands: 'u' to update sequences \n's' to score the alignment \n'q' to quit\n")
     if (command == 'u'):
-        sequence1 = input("Please enter DNA sequence (using uppercase letters A, T, C, G, and an indel symbol): ")
-        sequence2 = input("Please enter DNA sequence (using uppercase letters A, T, C, G, and an indel symbol): ")
+        sequence1 = input("Please enter DNA sequence (using uppercase letters A, T, C, G and an indel symbol): ")
+        sequence2 = input("Please enter DNA sequence (using uppercase letters A, T, C, G and an indel symbol): ")
+        print("You entered: " + sequence1 + '\n' + sequence2)
         min_seq = sequence1
 
         if (len(sequence2) < len(sequence1)):
@@ -36,6 +38,11 @@ while (command != 'q'):
                 matches +=1
             n += 1
 
-        print(str(matches) + ' matches found between ' + sequence1 + ' and ' + sequence2)
+        if ((len(sequence1) == 0) or (len(sequence2) == 0)):
+            print('Invalid DNA sequences entered, please re-enter sequences')
+        else:
+            print(str(matches) + ' matches found between ' + sequence1 + ' and ' + sequence2)
+    elif (command == 'q'):
+        break
 
 print("Thank you! Goodbye!")

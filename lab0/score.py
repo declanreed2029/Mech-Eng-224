@@ -5,8 +5,8 @@ Creation Date: 1/9/26
 Score alignment Code
 """
 
-sequence1 = input("Please enter DNA sequence (using uppercase letters A, T, C, G, and an indel symbol): ")
-sequence2 = input("Please enter DNA sequence (using uppercase letters A, T, C, G, and an indel symbol): ")
+sequence1 = input("Please enter DNA sequence (using uppercase letters A, T, C, G and an indel symbol): ")
+sequence2 = input("Please enter DNA sequence (using uppercase letters A, T, C, G and an indel symbol): ")
 min_seq = sequence1
 n = 0
 matches = 0
@@ -19,7 +19,7 @@ while (n < len(min_seq)):
         matches +=1
     n += 1
 
-if (matches > 1):
-    print(str(matches) + ' matche found between ' + sequence1 + ' and ' + sequence2)
+if (matches == 1):
+    print(str(matches) + ' match found between ' + sequence1 + ' and ' + sequence2)
 else:
     print(str(matches) + ' matches found between ' + sequence1 + ' and ' + sequence2)

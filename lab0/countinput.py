@@ -5,7 +5,7 @@ Creation Date: 1/9/26
 Count text input length code
 """
 
-text = input("Type text: ")
+text = input()
 index = 0
 char_amt = 0
 
