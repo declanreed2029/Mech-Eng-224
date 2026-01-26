@@ -39,7 +39,7 @@ INDEX_STUDY_GOOD_AT = 19
 INDEX_STUDY_HELP_WITH = 20
 
 # We also use a constant to decide which data file to open
-DATA_FILE = 'testdata1.csv'
+DATA_FILE = 'cs150data-w26.csv'
 
 # --------------------------------------------------------------------------
 
